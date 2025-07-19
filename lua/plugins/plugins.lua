@@ -22,5 +22,25 @@ return {
 	{
 		"stevearc/conform.nvim",
 		opts = {},
-	}
+	},
+	"tpope/vim-eunuch",
+	{
+		"coffebar/transfer.nvim",
+		lazy = true,
+		cmd = { "TransferInit", "DiffRemote", "TransferUpload", "TransferDownload", "TransferDirDiff", "TransferRepeat" },
+		opts = {},
+	},
+	{
+		"johmsalas/text-case.nvim",
+		config = function()
+			require("textcase").setup({})
+		end,
+		keys = {
+		},
+		cmd = {
+			"Subs",
+		},
+		lazy = false,
+	},
+	{ "chrisgrieser/nvim-spider", lazy = true },
 }

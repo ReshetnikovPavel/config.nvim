@@ -1,5 +1,13 @@
 require("telescope").setup({
 	defaults = {
+		theme = "center",
+		sorting_strategy = "ascending",
+		layout_config = {
+			horizontal = {
+				prompt_position = "top",
+				preview_width = 0.5,
+			},
+		},
 		mappings = {
 			i = {
 				["<C-h>"] = "which_key",
@@ -26,7 +34,7 @@ vim.keymap.set("n", "<leader>gf", builtin.git_files, {})
 vim.keymap.set("n", "<leader>gb", builtin.git_branches, {})
 vim.keymap.set("n", "<leader>gc", builtin.git_commits, {})
 vim.keymap.set("n", "<leader>gs", builtin.git_stash, {})
-vim.keymap.set("n", "<leader>gS", builtin.git_status, {})
+vim.keymap.set("n", "<leader>gd", builtin.git_status, {})
 
 
 

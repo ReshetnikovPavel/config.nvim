@@ -30,3 +30,10 @@ vim.keymap.set(
 	":.!python3 ~/scripts/fix_wrong_layout.py<CR>",
 	{ desc = "Call a script to fix text written in wrong layout" }
 )
+
+vim.keymap.set("n", "<leader>t", function()
+		local result = vim.treesitter.get_captures_at_cursor(0)
+		print(vim.inspect(result))
+	end,
+	{ noremap = true, silent = false }
+)
