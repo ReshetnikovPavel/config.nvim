@@ -35,8 +35,6 @@ vim.cmd([[
 	command! WA wa
 ]])
 
-require('make')
-
 vim.api.nvim_create_autocmd("TextYankPost", {
 	pattern = "*",
 	callback = function()
